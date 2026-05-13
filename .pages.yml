@@ -26,3 +26,14 @@ content:
         fields:
           - { name: url, label: URL, type: image }
       - { name: body, label: Body, type: rich-text }
+  - name: references
+    label: References
+    type: collection
+    path: _references
+    view:
+      fields: [ title, url, date ]
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Date, type: date, options: { time: true, format: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" } }
+      - { name: url, label: URL, type: image }
+      - { name: body, label: Body, type: rich-text }
